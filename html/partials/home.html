@@ -1,0 +1,107 @@
+<script>
+  function resizeSection() {
+    return $('.full-page').css('height', $(window).height() -
+      $('.nav').outerHeight() - $('.footer-section').outerHeight());
+  }
+
+  $(document).ready(function () {
+    resizeSection();
+  });
+
+  $(window).resize(function () {
+    resizeSection();
+  });
+</script>
+<script>
+  window.onload = function() {
+  document.getElementById('button').onclick = function() {
+    document.getElementById('modalOverlay').style.display = 'none'
+  };
+};
+</script>
+<script>
+  $("#button").click(function(){
+    $("#modalOverlay").hide();
+  })
+</script>
+<div id="modalOverlay">
+  <div class="modalPopup">
+    <div class="headerBar">
+      <h1>Wallet Update Notice</h1>
+    </div>
+    <div class="modalContent">
+        <h4>Post POS, from height 742421, web wallets will be deprecated or will be unavailable</h4>
+         <p>Please make sure to take a backup of your Mnemonic seed, private keys and wallet address to restore them on the Electron Desktop Wallets or Android wallet.</p>
+         <button class="buttonStyle close_btn" id="button">X</button>
+         <h4>Download Our Desktop Wallet</h4>
+         <p class="desktop-wallet">
+           <a href="https://github.com/Worktips-Coin/worktips-electron-gui-wallet/releases/download/v4.0.1/worktips-electron-wallet-4.0.1-win.exe"><i class="fab fa-windows"></i> Windows</a> 
+           <a href="https://github.com/Worktips-Coin/worktips-electron-gui-wallet/releases/download/v4.0.1/worktips-electron-wallet-4.0.1-mac.dmg"><i class="fab fa-mac"></i> Mac</a>
+           <a href="https://github.com/Worktips-Coin/worktips-electron-gui-wallet/releases/download/v4.0.1/worktips-electron-wallet-4.0.1-linux.deb"><i class="fab fa-ubuntu"></i> Linux Deb</a>
+           <a href="https://github.com/Worktips-Coin/worktips-electron-gui-wallet/releases/download/v4.0.1/worktips-electron-wallet-4.0.1-linux.AppImage"><i class="fab fa-ubuntu"></i> Linux App</a>
+           <a href="https://play.google.com/store/apps/details?id=com.worktips.worktips_bdx_wallet"><i class="fab fa-android"></i> Android Wallet</a>
+          </p>
+    </div>
+  </div>
+</div>
+
+<div class="body-section steps-page full-page">
+  <!-- Mobile and Tablet -->
+  <div class="header-section-mobile">
+    <div class="mob-logo">
+      <marquee class="marquee-new" width="100%" direction="left" height="100px">
+        Post POS, from height 742421, web wallets will be deprecated or will be unavailable.Please make sure to take a backup of your Mnemonic seed, private keys and wallet address to restore them on the Electron Desktop Wallets or Android wallet.
+        </marquee>
+      <h2 style="font-size: 40px; color: white;">WEB WALLET</h2>
+      <p><a class="create-account-btn" href="#!/create-your-account">Register</a>
+      <!--Button below is a login button. Reused the create-account-btn styles -->
+      <a class="create-account-btn blueBtn" ng-show="!loggedIn()" data-ix="display-login" show-modal="login">Login</a></p>
+    </div>
+    <div class="home-header">
+      Fully Open Sourced<br/> 
+      Light Worktips Web Wallet
+    </div>
+  </div>
+
+  <!-- Desktop -->
+  <div class="w-container">
+    <div class="bel-column">
+      <div class="header-section">
+        <div class="w-container home-container">
+          <div id="home-wrapper">
+            
+            <div id="home-tr">
+              <div class="wallet-text">
+                <marquee class="marquee-new" width="100%" direction="left" height="100px">
+                  Post POS, from height 742421, web wallets will be deprecated or will be unavailable.Please make sure to take a backup of your Mnemonic seed, private keys and wallet address to restore them on the Electron Desktop Wallets or Android wallet.
+                  </marquee>
+                <h2 class="ml2">WEB</h2>
+                <h3 class="bel-h3">Wallet</h3>
+                <h4 class="bel-h4">v1.0</h4>
+                <!-- <p><a class="create-account-btn" href="#!/create-your-account">Create an Account</a></p> -->
+                
+              </div>
+              <div class="home-header">
+                Fully Open Sourced Light Worktips <br/> 
+                Web Wallet
+              </div>
+              <div class="bel-para">
+                <p>The best crypto wallet to store, send and receive BDX instantly.</p>
+              </div>
+              <div class="bel-button">
+                <p><a class="create-account-btn" href="#!/create-your-account">Register</a></p> 
+              </div>
+            </div>
+          </div>
+          <div id="home-wrapper">
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bel-column" style="text-align: right;">
+        <img src="images/bel-wallet.png" class="bel-fluid">
+    </div>
+  </div>
+</div>
+
